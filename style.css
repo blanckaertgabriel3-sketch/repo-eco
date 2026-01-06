@@ -59,13 +59,29 @@ html {
     max-width: 300px;
     max-height: 100px;
 }
+main, footer {
+	display: flex;
+	justify-content: center;
+}
+.big-container {
+	background-color: gray;
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.big-container > * {
+	margin-top: 200px;
+}
+footer .big-container > * {
+	margin-bottom: 80px;
+}
 /* tablette */
 @media screen and (min-width: 780px) and (max-width: 979px) {
 html {
 	background-image: none;
 }
 .banniere {
-	background-color: blue;
 	height: 500px;
 	width: 60%;
 	background-image: url(img/logo.webp);
