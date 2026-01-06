@@ -1,84 +1,178 @@
+/* RESET */
 * {
-	margin: 0;
-	padding: 0;
-}
-header ul {
-	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header nav a {
-	text-decoration: none;
-	color: #000;
-	border: 3px solid #fff;
-	border-radius: 25px;
-	padding: 2px 15px;
-	background-color: #fff;
-	flex-wrap: nowrap;
+/* BASE */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
 }
-header nav a:hover {
-	text-decoration: none;
-	color: #fff;
-	border: 3px solid #fff;
-	border-radius: 25px;
-	padding: 2px 15px;
-	background-color: #212121;
 
+/* HEADER */
+.header {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("img/logo.webp") center / cover no-repeat;
 }
-header nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	height: 80px;
-	color: #fff;
-	background-color: #212121;
+
+/* NAVIGATION */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
 }
-header nav ul {
-	display: flex;
-	flex-direction: row;
-	gap: 20px;
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
 }
-.uppercase {
-	text-transform: uppercase;
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
-html {
-	background-image: url(img/logo.webp);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-attachment: fixed;
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 18px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
-.container-banniere {
-	display: flex;
-	justify-content: center;
-	height: 500px;
-	width: 100%;
+
+.nav a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* MAIN */
+.main {
+    padding: 80px 10%;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.intro h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* FEATURES */
+.features {
+    margin-bottom: 80px;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 10px 0 50px;
+    opacity: 0.8;
+}
+
+/* GRID */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* FEATURE CARD */
+.feature {
+    background-color: #1c1c1c;
+    padding: 25px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 200px auto auto;
+    gap: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
 .feature img {
-    border-radius: 25px;
-    max-width: 300px;
-    max-height: 100px;
-}
-/* tablette */
-@media screen and (min-width: 780px) and (max-width: 979px) {
-html {
-	background-image: none;
-}
-.banniere {
-	background-color: blue;
-	height: 500px;
-	width: 60%;
-	background-image: url(img/logo.webp);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-
-}
-.container-banniere {
-	background-color: gray;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
+.feature h3 {
+    font-size: 22px;
+    margin-top: 5px;
 }
-/* desktop */
-@media screen and (min-width: 980px) {
 
+.feature p {
+    font-size: 15px;
+    opacity: 0.85;
 }
+
+/* FOOTER */
+.footer {
+    background-color: #111111;
+    padding: 60px 10%;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+}
+
+.footer p {
+    opacity: 0.8;
